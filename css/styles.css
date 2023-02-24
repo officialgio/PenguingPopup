@@ -75,7 +75,7 @@ div {
 }
 
 .left {
-    padding-left: 10em;
+    padding-left: 8em;
 }
 
 :is(.row-1, .row-2, .row-3) > * {
