@@ -1,0 +1,131 @@
+:root {
+    /* colors */
+    --clr-cyan: hsl(187, 100%, 40%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--clr-cyan);
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+div {
+    margin: 2em;
+    padding: 1em;
+}
+
+header {
+    padding: 2em
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    left: 24em;
+}
+
+div {
+    float: left;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+    margin: var(--margin, 3em);
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding: var(--padding, 4.2em 4em);
+    transition: all 250ms ease-in-out;
+}
+
+.row-2 {
+    --margin: 0;
+    --padding: 0;
+    padding-left: 20em;
+    padding-right: 2em;
+}
+
+.row-3 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.left {
+    padding-left: 10em;
+}
+
+:is(.row-1, .row-2, .row-3) > * {
+    opacity: 0.80;
+    transition: all 300ms ease-in-out;
+}
+
+/* When you hover over an image, you
+should see the mound with a question mark. */
+:is(.row-1, .row-2, .row-3) > *:is(:hover) {
+    background-image: url(/assets/mound_1_hover.png);
+    opacity: 1;
+    scale: 1.2;
+    transition: all 250ms ease-in-out;
+}
+
+/* When you click on a mound, you
+should either display a penguin or a yeti */
+:is(.row-1.peng-1) :is(:active) {
+    background-image: url(/assets/penguin_1.png);
+}
+
+:is(.row-1.peng-2) :is(:active) {
+    background-image: url(/assets/penguin_2.png);
+}
+
+:is(.row-1.peng-3) :is(:active) {
+    background-image: url(/assets/penguin_3.png);
+}
+
+:is(.row-1.peng-4) :is(:active) {
+    background-image: url(/assets/penguin_4.png);
+}
+
+:is(.row-2.peng-4) :is(:active) {
+    background-image: url(/assets/yeti.png);
+}
+
+:is(.row-2.peng-5) :is(:active) {
+    background-image: url(/assets/penguin_5.png);
+}
+
+:is(.row-3.peng-6) :is(:active) {
+    background-image: url(/assets/penguin_6.png);
+}
+
+:is(.row-3.peng-7) :is(:active) {
+    background-image: url(/assets/penguin_7.png);
+}
+
+:is(.row-3.peng-8) :is(:active) {
+    background-image: url(/assets/penguin_8.png);
+}
